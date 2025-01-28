@@ -1,0 +1,79 @@
+body {
+    font-family: 'Atma', cursive;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.sidebar {
+    width: 250px;
+    background: #333;
+    color: white;
+    height: 100vh;
+    position: fixed;
+    overflow-y: auto;
+}
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.sidebar ul li {
+    padding: 15px;
+    cursor: pointer;
+    border-bottom: 1px solid #444;
+}
+.sidebar ul li:hover {
+    background: #444;
+}
+.content {
+    margin-left: 250px;
+    padding: 20px;
+    width: calc(100% - 250px);
+}
+.note-container {
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 20px;
+}
+.note-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+.note-description {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #555;
+    margin-bottom: 20px;
+}
+pre {
+    background: #282c34;
+    color: #abb2bf;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-family: 'Courier New', monospace;
+}
+code {
+    color: #61dafb;
+}
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+    .content {
+        margin-left: 200px;
+        width: calc(100% - 200px);
+    }
+    .note-title {
+        font-size: 1.3rem;
+    }
+    .note-description {
+        font-size: 1rem;
+    }
+    pre {
+        font-size: 0.9rem;
+    }
+}

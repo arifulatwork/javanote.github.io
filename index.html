@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Note </title>
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+    <div class="sidebar">
+        <ul>
+            <li onclick="showContent('topic1')">Topic 1: Introduction to Programming</li>
+            <li onclick="showContent('topic2')">Topic 2: Variables and Data Types</li>
+            <li onclick="showContent('topic3')">Topic 3: Functions</li>
+            <li onclick="showContent('topic4')">Topic 4: Loops</li>
+            <li onclick="showContent('topic5')">Topic 5: Arrays</li>
+        </ul>
+    </div>
+    <div class="content">
+        <div class="note-container" id="topic1">
+            <h1 class="note-title">Introduction to Programming</h1>
+            <p class="note-description">Programming is the process of writing instructions for a computer to execute.</p>
+            <pre><code>// Example code
+console.log("Hello, World!");</code></pre>
+        </div>
+        <div class="note-container" id="topic2" style="display:none;">
+            <h1 class="note-title">Variables and Data Types</h1>
+            <p class="note-description">Variables are containers for storing data values.</p>
+            <pre><code>// Example code
+let name = "John";
+console.log(name);</code></pre>
+        </div>
+        <div class="note-container" id="topic3" style="display:none;">
+            <h1 class="note-title">Functions</h1>
+            <p class="note-description">Functions are reusable blocks of code that perform a specific task.</p>
+            <pre><code>// Example code
+function greet() {
+    console.log("Hello!");
+}
+greet();</code></pre>
+        </div>
+        <div class="note-container" id="topic4" style="display:none;">
+            <h1 class="note-title">Loops</h1>
+            <p class="note-description">Loops are used to execute a block of code repeatedly.</p>
+            <pre><code>// Example code
+for (let i = 0; i < 5; i++) {
+    console.log(i);
+}</code></pre>
+        </div>
+        <div class="note-container" id="topic5" style="display:none;">
+            <h1 class="note-title">Arrays</h1>
+            <p class="note-description">Arrays are used to store multiple values in a single variable.</p>
+            <pre><code>// Example code
+let fruits = ["Apple", "Banana", "Cherry"];
+console.log(fruits[0]);</code></pre>
+        </div>
+    </div>
+    <script>
+        function showContent(topicId) {
+            document.querySelectorAll('.note-container').forEach(container => {
+                container.style.display = 'none';
+            });
+            document.getElementById(topicId).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
