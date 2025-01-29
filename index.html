@@ -50,12 +50,54 @@ for (let i = 0; i < 5; i++) {
         </div>
         <div class="note-container" id="topic5" style="display:none;">
             <h1 class="note-title">Arrays</h1>
-            <p class="note-description">Arrays are used to store multiple values in a single variable.</p>
-            <pre><code>// Example code
-let fruits = ["Apple", "Banana", "Cherry"];
-console.log(fruits[0]);</code></pre>
+            <p class="note-description">Arrays are used to store multiple values in a single variable, instead of declaring separate variables for each value.</p>
+            Array Starts with [0,1,2,3, continue];
+            <pre><code>
+            // Example code
+            String [] fruits = ["Apple", "Banana", "Cherry"];
+            
+            console.log(fruits[0]);</code></pre>
+
+                <h1 class="note-title">Access the Elements of an Array</h1>
+                
+
+                <pre><code>
+                    // Example code
+                    public class AccessArray {
+
+                        String [] mobileOperator = {"Nokia","Samsung","ioS"};
+                    
+                        int [] number = {1,2,3,0,4,5};
+                    
+                    
+                        public static void main(String[] args) {
+                            
+                            String [] networkOperator = {"LMT","Visio","ioS"};
+                    
+                            AccessArray Nice = new AccessArray(); 
+                    
+                            System.out.println(Nice.mobileOperator[0]); // Access through object
+                    
+                            System.out.println(Nice.number[1]); // Access through object
+                    
+                            System.out.println(networkOperator[1]); // Access through atrribute inside main method
+                    
+                        }
+                        
+                    }
+                    </code>
+                    
+                </pre>
+                <p class="note-description"> How the output worked : </br>
+                  <b>  Nice.mobileOperator[0] → "Nokia" </br>
+                    Nice.number[1] → 2 </br>
+                    networkOperator[1] → "Visio" </p></b> 
         </div>
+
+        
+
     </div>
+    
     <script>
         function showContent(topicId) {
             document.querySelectorAll('.note-container').forEach(container => {
