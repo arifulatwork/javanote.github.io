@@ -92,7 +92,42 @@ for (let i = 0; i < 5; i++) {
                   <b>  Nice.mobileOperator[0] → "Nokia" </br>
                     Nice.number[1] → 2 </br>
                     networkOperator[1] → "Visio" </p></b> 
+
+
+
+            <h1 class="note-title">Change an Array Element</h1>
+            <p class="note-description">Arrays are used to store multiple values in a single variable, instead of declaring separate variables for each value.</p>
+            
+            <pre><code>
+            // Example code
+            public class ChangeElementArray {
+
+
+                String [] cars = {"Toyota"}; 
+            
+                public static void main(String[] args) {
+            
+                    String [] fruit = {"Apple"};
+            
+                    fruit [0] = "Mango";
+                    
+                    ChangeElementArray changeArray = new ChangeElementArray(); // Called by Object
+            
+                    changeArray.cars[0]= "Tesla";
+            
+            
+                    System.out.println(changeArray.cars[0]); // Output: Tesla
+            
+                    System.out.println(fruit[0]); // Output: Mango
+            
+                }
+                
+            }
+
+           </code></pre>
         </div>
+
+        
 
         
 
