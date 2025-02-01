@@ -4,31 +4,80 @@
             "id": "topic1",
             "title": "Introduction to Programming",
             "description": "Programming is the process of writing instructions for a computer to execute.",
-            "code": "// Example code\nconsole.log(\"Hello, World!\");"
+            "content": [
+                {
+                    "description": "Programming is done using various languages such as JavaScript, Python, C++, etc.",
+                    "code": "// Example code\nconsole.log(\"Hello, World!\");"
+                }
+            ]
         },
         {
             "id": "topic2",
             "title": "Variables and Data Types",
             "description": "Variables are containers for storing data values.",
-            "code": "// Example code\nlet name = \"John\";\nconsole.log(name);"
+            "content": [
+                {
+                    "description": "JavaScript supports different data types like string, number, boolean, etc.",
+                    "code": "// Example code\nlet name = \"John\";\nconsole.log(name);"
+                },
+                {
+                    "description": "Variables can be defined using var, let, or const.",
+                    "code": "const age = 25;\nconsole.log(age);"
+                }
+            ]
         },
         {
             "id": "topic3",
             "title": "Functions",
             "description": "Functions are reusable blocks of code that perform a specific task.",
-            "code": "// Example code\nfunction greet() {\n    console.log(\"Hello!\");\n}\ngreet();"
+            "content": [
+                {
+                    "description": "A function is defined using the function keyword, followed by the function name and parameters.",
+                    "code": "// Example code\nfunction greet() {\n    console.log(\"Hello!\");\n}\ngreet();"
+                },
+                {
+                    "description": "Functions can also return values.",
+                    "code": "// Example code\nfunction add(a, b) {\n    return a + b;\n}\nconsole.log(add(2, 3));"
+                }
+            ]
         },
         {
             "id": "topic4",
             "title": "Loops",
             "description": "Loops are used to execute a block of code repeatedly.",
-            "code": "// Example code\nfor (let i = 0; i < 5; i++) {\n    console.log(i);\n}"
+            "content": [
+                {
+                    "description": "A for loop is often used when you know the number of iterations in advance.",
+                    "code": "// Example code\nfor (let i = 0; i < 5; i++) {\n    console.log(i);\n}"
+                },
+                {
+                    "description": "A while loop continues to execute until a condition is no longer true.",
+                    "code": "// Example code\nlet i = 0;\nwhile (i < 5) {\n    console.log(i);\n    i++;\n}"
+                }
+            ]
         },
         {
             "id": "topic5",
             "title": "Arrays",
             "description": "Arrays are used to store multiple values in a single variable.",
-            "code": "String[] fruits = {\"Apple\", \"Banana\", \"Cherry\"};\nconsole.log(fruits[0]);"
+            "content": [
+                {
+                    "description": "Arrays can store values of the same type, like numbers or strings.",
+                    "code": "let fruits = [\"Apple\", \"Banana\", \"Cherry\"];\nconsole.log(fruits[0]);"
+                },
+                {
+                    "description": "Arrays can be multidimensional, allowing you to store arrays inside arrays.",
+                    "code": "int[][] matrix = {{1, 2}, {3, 4}};\nconsole.log(matrix[0][1]);"
+                },
+                {
+                    "description": "You can also store different types of elements in an array.",
+                    "code": "Object[] mixedArray = {1, \"Apple\", true};\nconsole.log(mixedArray[1]);"
+                },
+                {
+                    "description": "Arrays can be iterated using loops.",
+                    "code": "for (let i = 0; i < fruits.length; i++) {\n    console.log(fruits[i]);\n}"
+                }
+            ]
         }
     ]
 }

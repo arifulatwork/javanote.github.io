@@ -31,15 +31,25 @@
                 });
             });
 
+        // Function to display the content of a topic
         function showContent(topic) {
             const contentArea = document.getElementById("content-area");
-            contentArea.innerHTML = `
+            let content = `
                 <div class="note-container">
                     <h1 class="note-title">${topic.title}</h1>
                     <p class="note-description">${topic.description}</p>
-                    <pre><code>${topic.code}</code></pre>
-                </div>
             `;
+
+            // Loop through the content array to display multiple descriptions and codes
+            topic.content.forEach(item => {
+                content += `
+                    <p class="note-description">${item.description}</p>
+                    <pre><code>${item.code}</code></pre>
+                `;
+            });
+
+            content += `</div>`;
+            contentArea.innerHTML = content;
         }
     </script>
 </body>
