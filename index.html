@@ -3,142 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Java Note </title>
+    <title>Java Note</title>
     <link rel="stylesheet" href="style.css">
-   
 </head>
 <body>
     <div class="sidebar">
-        <ul>
-            <li onclick="showContent('topic1')">Topic 1: Introduction to Programming</li>
-            <li onclick="showContent('topic2')">Topic 2: Variables and Data Types</li>
-            <li onclick="showContent('topic3')">Topic 3: Functions</li>
-            <li onclick="showContent('topic4')">Topic 4: Loops</li>
-            <li onclick="showContent('topic5')">Topic 5: Arrays</li>
-        </ul>
+        <ul id="sidebar-menu"></ul>
     </div>
-    <div class="content">
-        <div class="note-container" id="topic1">
-            <h1 class="note-title">Introduction to Programming</h1>
-            <p class="note-description">Programming is the process of writing instructions for a computer to execute.</p>
-            <pre><code>// Example code
-console.log("Hello, World!");</code></pre>
-        </div>
-        <div class="note-container" id="topic2" style="display:none;">
-            <h1 class="note-title">Variables and Data Types</h1>
-            <p class="note-description">Variables are containers for storing data values.</p>
-            <pre><code>// Example code
-let name = "John";
-console.log(name);</code></pre>
-        </div>
-        <div class="note-container" id="topic3" style="display:none;">
-            <h1 class="note-title">Functions</h1>
-            <p class="note-description">Functions are reusable blocks of code that perform a specific task.</p>
-            <pre><code>// Example code
-function greet() {
-    console.log("Hello!");
-}
-greet();</code></pre>
-        </div>
-        <div class="note-container" id="topic4" style="display:none;">
-            <h1 class="note-title">Loops</h1>
-            <p class="note-description">Loops are used to execute a block of code repeatedly.</p>
-            <pre><code>// Example code
-for (let i = 0; i < 5; i++) {
-    console.log(i);
-}</code></pre>
-        </div>
-        <div class="note-container" id="topic5" style="display:none;">
-            <h1 class="note-title">Arrays</h1>
-            <p class="note-description">Arrays are used to store multiple values in a single variable, instead of declaring separate variables for each value.</p>
-            Array Starts with [0,1,2,3, continue];
-            <pre><code>
-            // Example code
-            String [] fruits = ["Apple", "Banana", "Cherry"];
-            
-            console.log(fruits[0]);</code></pre>
-
-                <h1 class="note-title">Access the Elements of an Array</h1>
-                
-
-                <pre><code>
-                    // Example code
-                    public class AccessArray {
-
-                        String [] mobileOperator = {"Nokia","Samsung","ioS"};
-                    
-                        int [] number = {1,2,3,0,4,5};
-                    
-                    
-                        public static void main(String[] args) {
-                            
-                            String [] networkOperator = {"LMT","Visio","ioS"};
-                    
-                            AccessArray Nice = new AccessArray(); 
-                    
-                            System.out.println(Nice.mobileOperator[0]); // Access through object
-                    
-                            System.out.println(Nice.number[1]); // Access through object
-                    
-                            System.out.println(networkOperator[1]); // Access through atrribute inside main method
-                    
-                        }
-                        
-                    }
-                    </code>
-                    
-                </pre>
-                <p class="note-description"> How the output worked : </br>
-                  <b>  Nice.mobileOperator[0] → "Nokia" </br>
-                    Nice.number[1] → 2 </br>
-                    networkOperator[1] → "Visio" </p></b> 
-
-
-
-            <h1 class="note-title">Change an Array Element</h1>
-            <p class="note-description">Arrays are used to store multiple values in a single variable, instead of declaring separate variables for each value.</p>
-            
-            <pre><code>
-            // Example code
-            public class ChangeElementArray {
-
-
-                String [] cars = {"Toyota"}; 
-            
-                public static void main(String[] args) {
-            
-                    String [] fruit = {"Apple"};
-            
-                    fruit [0] = "Mango";
-                    
-                    ChangeElementArray changeArray = new ChangeElementArray(); // Called by Object
-            
-                    changeArray.cars[0]= "Tesla";
-            
-            
-                    System.out.println(changeArray.cars[0]); // Output: Tesla
-            
-                    System.out.println(fruit[0]); // Output: Mango
-            
-                }
-                
-            }
-
-           </code></pre>
-        </div>
-
-        
-
-        
-
+    <div class="content" id="content-area">
+        <p>Click on a topic to view the content.</p>
     </div>
-    
+
     <script>
-        function showContent(topicId) {
-            document.querySelectorAll('.note-container').forEach(container => {
-                container.style.display = 'none';
+        // Load JSON data and populate the sidebar & content
+        fetch("notes.json")
+            .then(response => response.json())
+            .then(data => {
+                const sidebarMenu = document.getElementById("sidebar-menu");
+                const contentArea = document.getElementById("content-area");
+
+                data.topics.forEach(topic => {
+                    // Create sidebar list items
+                    const listItem = document.createElement("li");
+                    listItem.textContent = topic.title;
+                    listItem.onclick = () => showContent(topic);
+                    sidebarMenu.appendChild(listItem);
+                });
             });
-            document.getElementById(topicId).style.display = 'block';
+
+        function showContent(topic) {
+            const contentArea = document.getElementById("content-area");
+            contentArea.innerHTML = `
+                <div class="note-container">
+                    <h1 class="note-title">${topic.title}</h1>
+                    <p class="note-description">${topic.description}</p>
+                    <pre><code>${topic.code}</code></pre>
+                </div>
+            `;
         }
     </script>
 </body>

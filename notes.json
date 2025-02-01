@@ -1,0 +1,34 @@
+{
+    "topics": [
+        {
+            "id": "topic1",
+            "title": "Introduction to Programming",
+            "description": "Programming is the process of writing instructions for a computer to execute.",
+            "code": "// Example code\nconsole.log(\"Hello, World!\");"
+        },
+        {
+            "id": "topic2",
+            "title": "Variables and Data Types",
+            "description": "Variables are containers for storing data values.",
+            "code": "// Example code\nlet name = \"John\";\nconsole.log(name);"
+        },
+        {
+            "id": "topic3",
+            "title": "Functions",
+            "description": "Functions are reusable blocks of code that perform a specific task.",
+            "code": "// Example code\nfunction greet() {\n    console.log(\"Hello!\");\n}\ngreet();"
+        },
+        {
+            "id": "topic4",
+            "title": "Loops",
+            "description": "Loops are used to execute a block of code repeatedly.",
+            "code": "// Example code\nfor (let i = 0; i < 5; i++) {\n    console.log(i);\n}"
+        },
+        {
+            "id": "topic5",
+            "title": "Arrays",
+            "description": "Arrays are used to store multiple values in a single variable.",
+            "code": "String[] fruits = {\"Apple\", \"Banana\", \"Cherry\"};\nconsole.log(fruits[0]);"
+        }
+    ]
+}
