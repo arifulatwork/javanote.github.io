@@ -6,8 +6,40 @@
             "description": "Programming is the process of writing instructions for a computer to execute.",
             "content": [
                 {
-                    "description": "Programming is done using various languages such as JavaScript, Python, C++, etc.",
+                    "description": "Programming helps automate tasks and solve complex problems efficiently.",
                     "code": "// Example code\nconsole.log(\"Hello, World!\");"
+                },
+                {
+                    "description": "You can write code in different programming languages like Java, Python, JavaScript, etc.",
+                    "code": "print(\"Hello, World!\")  # Python example"
+                }
+            ],
+            "subtopics": [
+                {
+                    "id": "subtopic1-1",
+                    "title": "History of Programming",
+                    "description": "Programming has evolved from low-level machine languages to high-level languages.",
+                    "content": [
+                        {
+                            "description": "Early programming involved punch cards and machine code.",
+                            "code": "// Assembly example\nMOV A, 5\nADD B, A"
+                        }
+                    ]
+                },
+                {
+                    "id": "subtopic1-2",
+                    "title": "Popular Programming Languages",
+                    "description": "Different languages are used for different purposes.",
+                    "content": [
+                        {
+                            "description": "JavaScript is used for web development.",
+                            "code": "document.write('Hello from JavaScript!');"
+                        },
+                        {
+                            "description": "Python is known for data science, automation, and scripting.",
+                            "code": "def greet():\n    print(\"Hello, Python World!\")\ngreet()"
+                        }
+                    ]
                 }
             ]
         },
@@ -17,27 +49,75 @@
             "description": "Variables are containers for storing data values.",
             "content": [
                 {
-                    "description": "JavaScript supports different data types like string, number, boolean, etc.",
-                    "code": "// Example code\nlet name = \"John\";\nconsole.log(name);"
+                    "description": "You can declare variables using `let`, `const`, or `var` in JavaScript.",
+                    "code": "let name = \"John\";\nconst age = 30;\nconsole.log(name, age);"
                 },
                 {
-                    "description": "Variables can be defined using var, let, or const.",
-                    "code": "const age = 25;\nconsole.log(age);"
+                    "description": "Java supports strongly-typed variables.",
+                    "code": "int number = 10;\nString text = \"Hello\";\nSystem.out.println(text);"
+                }
+            ],
+            "subtopics": [
+                {
+                    "id": "subtopic2-1",
+                    "title": "Primitive Data Types",
+                    "description": "Primitive types include numbers, booleans, and characters.",
+                    "content": [
+                        {
+                            "description": "JavaScript primitive types are Number, String, Boolean, Null, Undefined, and Symbol.",
+                            "code": "let isActive = true;\nlet score = 100;\nconsole.log(isActive, score);"
+                        }
+                    ]
+                },
+                {
+                    "id": "subtopic2-2",
+                    "title": "Reference Data Types",
+                    "description": "Objects, arrays, and functions are reference data types.",
+                    "content": [
+                        {
+                            "description": "In JavaScript, arrays and objects are mutable reference types.",
+                            "code": "let user = {name: \"Alice\", age: 25};\nlet items = [1, 2, 3];\nconsole.log(user, items);"
+                        }
+                    ]
                 }
             ]
         },
         {
             "id": "topic3",
             "title": "Functions",
-            "description": "Functions are reusable blocks of code that perform a specific task.",
+            "description": "Functions are reusable blocks of code that perform specific tasks.",
             "content": [
                 {
-                    "description": "A function is defined using the function keyword, followed by the function name and parameters.",
-                    "code": "// Example code\nfunction greet() {\n    console.log(\"Hello!\");\n}\ngreet();"
+                    "description": "Functions can accept parameters and return values.",
+                    "code": "function greet(name) {\n    return `Hello, ${name}!`;\n}\nconsole.log(greet('Bob'));"
                 },
                 {
-                    "description": "Functions can also return values.",
-                    "code": "// Example code\nfunction add(a, b) {\n    return a + b;\n}\nconsole.log(add(2, 3));"
+                    "description": "Arrow functions provide a concise syntax in JavaScript.",
+                    "code": "const add = (a, b) => a + b;\nconsole.log(add(5, 3));"
+                }
+            ],
+            "subtopics": [
+                {
+                    "id": "subtopic3-1",
+                    "title": "Function Parameters",
+                    "description": "Functions can have default, optional, and rest parameters.",
+                    "content": [
+                        {
+                            "description": "Default parameters in JavaScript help avoid undefined values.",
+                            "code": "function greet(name = 'Guest') {\n    console.log(`Hello, ${name}`);\n}\ngreet();"
+                        }
+                    ]
+                },
+                {
+                    "id": "subtopic3-2",
+                    "title": "Higher-Order Functions",
+                    "description": "Functions that take other functions as arguments or return functions.",
+                    "content": [
+                        {
+                            "description": "Array methods like `map`, `filter`, and `reduce` use higher-order functions.",
+                            "code": "const numbers = [1, 2, 3, 4];\nconst squared = numbers.map(n => n * n);\nconsole.log(squared);"
+                        }
+                    ]
                 }
             ]
         },
@@ -47,12 +127,36 @@
             "description": "Loops are used to execute a block of code repeatedly.",
             "content": [
                 {
-                    "description": "A for loop is often used when you know the number of iterations in advance.",
-                    "code": "// Example code\nfor (let i = 0; i < 5; i++) {\n    console.log(i);\n}"
+                    "description": "For loops are commonly used for iterating over arrays.",
+                    "code": "for (let i = 0; i < 5; i++) {\n    console.log(i);\n}"
                 },
                 {
-                    "description": "A while loop continues to execute until a condition is no longer true.",
-                    "code": "// Example code\nlet i = 0;\nwhile (i < 5) {\n    console.log(i);\n    i++;\n}"
+                    "description": "While loops continue as long as the condition is true.",
+                    "code": "let count = 0;\nwhile (count < 3) {\n    console.log(count);\n    count++;\n}"
+                }
+            ],
+            "subtopics": [
+                {
+                    "id": "subtopic4-1",
+                    "title": "Nested Loops",
+                    "description": "Loops within loops, useful for multidimensional arrays.",
+                    "content": [
+                        {
+                            "description": "Example of a nested loop to create a multiplication table.",
+                            "code": "for (let i = 1; i <= 3; i++) {\n    for (let j = 1; j <= 3; j++) {\n        console.log(`${i} x ${j} = ${i * j}`);\n    }\n}"
+                        }
+                    ]
+                },
+                {
+                    "id": "subtopic4-2",
+                    "title": "Break and Continue",
+                    "description": "Control loop flow with `break` and `continue`.",
+                    "content": [
+                        {
+                            "description": "`break` exits the loop early, while `continue` skips the current iteration.",
+                            "code": "for (let i = 0; i < 5; i++) {\n    if (i === 3) break;\n    console.log(i);\n}"
+                        }
+                    ]
                 }
             ]
         },
@@ -62,20 +166,36 @@
             "description": "Arrays are used to store multiple values in a single variable.",
             "content": [
                 {
-                    "description": "Arrays can store values of the same type, like numbers or strings.",
+                    "description": "JavaScript arrays are flexible and can hold mixed data types.",
                     "code": "let fruits = [\"Apple\", \"Banana\", \"Cherry\"];\nconsole.log(fruits[0]);"
                 },
                 {
-                    "description": "Arrays can be multidimensional, allowing you to store arrays inside arrays.",
-                    "code": "int[][] matrix = {{1, 2}, {3, 4}};\nconsole.log(matrix[0][1]);"
+                    "description": "Java arrays are strongly typed and have a fixed size.",
+                    "code": "String[] fruits = {\"Apple\", \"Banana\", \"Cherry\"};\nSystem.out.println(fruits[0]);"
+                }
+            ],
+            "subtopics": [
+                {
+                    "id": "subtopic5-1",
+                    "title": "Array Methods",
+                    "description": "Common methods include `push`, `pop`, `shift`, and `unshift`.",
+                    "content": [
+                        {
+                            "description": "Use `push` to add elements and `pop` to remove the last element.",
+                            "code": "let numbers = [1, 2, 3];\nnumbers.push(4);\nconsole.log(numbers);\nnumbers.pop();\nconsole.log(numbers);"
+                        }
+                    ]
                 },
                 {
-                    "description": "You can also store different types of elements in an array.",
-                    "code": "Object[] mixedArray = {1, \"Apple\", true};\nconsole.log(mixedArray[1]);"
-                },
-                {
-                    "description": "Arrays can be iterated using loops.",
-                    "code": "for (let i = 0; i < fruits.length; i++) {\n    console.log(fruits[i]);\n}"
+                    "id": "subtopic5-2",
+                    "title": "Multidimensional Arrays",
+                    "description": "Arrays within arrays, useful for matrices.",
+                    "content": [
+                        {
+                            "description": "Access elements using multiple indices.",
+                            "code": "let matrix = [\n    [1, 2, 3],\n    [4, 5, 6],\n    [7, 8, 9]\n];\nconsole.log(matrix[1][2]);"
+                        }
+                    ]
                 }
             ]
         }

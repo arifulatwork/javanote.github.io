@@ -19,38 +19,66 @@
     </footer>
 
     <script>
-        // Load JSON data and populate the sidebar & content
+        // Load JSON data and populate the sidebar with subtopics
         fetch("notes.json")
             .then(response => response.json())
             .then(data => {
                 const sidebarMenu = document.getElementById("sidebar-menu");
-                const contentArea = document.getElementById("content-area");
 
                 data.topics.forEach(topic => {
-                    // Create sidebar list items
                     const listItem = document.createElement("li");
                     listItem.textContent = topic.title;
-                    listItem.onclick = () => showContent(topic);
+
+                    // Sub-menu for subtopics
+                    let subMenu;
+                    if (topic.subtopics) {
+                        subMenu = document.createElement("ul");
+                        subMenu.classList.add("sub-menu"); // Hidden by default
+
+                        topic.subtopics.forEach(subtopic => {
+                            const subItem = document.createElement("li");
+                            subItem.textContent = subtopic.title;
+                            subItem.onclick = (event) => {
+                                event.stopPropagation(); // Prevent parent click event
+                                showContent(subtopic);
+                            };
+                            subMenu.appendChild(subItem);
+                        });
+
+                        listItem.appendChild(subMenu);
+                    }
+
+                    listItem.onclick = (event) => {
+                        event.stopPropagation(); // Prevent triggering parent's parent
+                        showContent(topic);
+
+                        // Toggle sub-menu visibility
+                        if (subMenu) {
+                            subMenu.classList.toggle("visible");
+                        }
+                    };
+
                     sidebarMenu.appendChild(listItem);
                 });
             });
 
-        // Function to display the content of a topic
-        function showContent(topic) {
+        // Show content for topics and subtopics
+        function showContent(item) {
             const contentArea = document.getElementById("content-area");
             let content = `
                 <div class="note-container">
-                    <h1 class="note-title">${topic.title}</h1>
-                    <p class="note-description">${topic.description}</p>
+                    <h1 class="note-title">${item.title}</h1>
+                    ${item.description ? `<p class="note-description">${item.description}</p>` : ""}
             `;
 
-            // Loop through the content array to display multiple descriptions and codes
-            topic.content.forEach(item => {
-                content += `
-                    <p class="note-description">${item.description}</p>
-                    <pre><code>${item.code}</code></pre>
-                `;
-            });
+            if (item.content) {
+                item.content.forEach(entry => {
+                    content += `
+                        <p class="note-description">${entry.description}</p>
+                        <pre><code>${entry.code}</code></pre>
+                    `;
+                });
+            }
 
             content += `</div>`;
             contentArea.innerHTML = content;

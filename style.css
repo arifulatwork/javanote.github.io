@@ -4,15 +4,8 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-}
-footer {
-    text-align: center;
-    padding: 20px;
-    /* background-color: #333;
-    color: white; */
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .sidebar {
@@ -23,41 +16,79 @@ footer {
     position: fixed;
     overflow-y: auto;
 }
+
 .sidebar ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
+
 .sidebar ul li {
     padding: 15px;
     cursor: pointer;
     border-bottom: 1px solid #444;
+    position: relative;
 }
+
 .sidebar ul li:hover {
     background: #444;
 }
+
+/* Sub-menu styling */
+.sub-menu {
+    display: none; /* Hidden by default */
+    background: #444;
+    padding-left: 20px;
+    transition: max-height 0.3s ease-out;
+    overflow: hidden;
+    max-height: 0; /* Collapsed initially */
+}
+
+/* When visible, expand the sub-menu */
+.sub-menu.visible {
+    display: block;
+    max-height: 500px; /* Adjust as needed */
+}
+
+.sub-menu li {
+    padding: 10px;
+    border-bottom: 1px solid #555;
+    font-size: 0.9rem;
+}
+
+.sub-menu li:hover {
+    background: #555;
+}
+
 .content {
     margin-left: 250px;
     padding: 20px;
     width: calc(100% - 250px);
+    flex-grow: 1;
+    overflow-y: auto;
+    background-color: #f4f4f9;
 }
+
 .note-container {
     background: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
     padding: 20px;
 }
+
 .note-title {
     font-size: 1.5rem;
     margin-bottom: 10px;
     color: #333;
 }
+
 .note-description {
     font-size: 1.2rem;
     line-height: 1.5;
     color: #555;
     margin-bottom: 20px;
 }
+
 pre {
     background: #282c34;
     color: #abb2bf;
@@ -66,23 +97,38 @@ pre {
     overflow-x: auto;
     font-family: 'Courier New', monospace;
 }
+
 code {
     color: #61dafb;
 }
+
+footer {
+    text-align: center;
+    padding: 15px;
+    /* background-color: #333;
+    color: white; */
+    width: 100%;
+    margin-top: auto;
+}
+
 @media (max-width: 768px) {
     .sidebar {
         width: 200px;
     }
+
     .content {
         margin-left: 200px;
         width: calc(100% - 200px);
     }
+
     .note-title {
         font-size: 1.3rem;
     }
+
     .note-description {
         font-size: 1rem;
     }
+
     pre {
         font-size: 0.9rem;
     }
