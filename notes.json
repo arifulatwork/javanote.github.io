@@ -88,13 +88,13 @@
             "description": "",
             "content": [
                 {
-                    "description": "",
-                    "code": "public class ComparisonExample {\n    public static void main(String[] args) {\n        int a = 10;\n        int b = 20;\n\n        // Using comparison operators in if-else\n        if (a < b) {\n            System.out.println(\"a is less than b\");\n        }\n\n        if (a <= b) {\n            System.out.println(\"a is less than or equal to b\");\n        }\n\n        if (a > b) {\n            System.out.println(\"a is greater than b\");\n        }\n\n        if (a >= b) {\n            System.out.println(\"a is greater than or equal to b\");\n        }\n\n        if (a == b) {\n            System.out.println(\"a is equal to b\");\n        }\n\n        if (a != b) {\n            System.out.println(\"a is not equal to b\");\n        }\n    }\n}\n"
+                    "description": "This Java code demonstrates the use of comparison operators to compare two integers 'a' and 'b'. It evaluates conditions such as 'less than', 'less than or equal to', 'greater than', 'greater than or equal to', 'equal to', and 'not equal to', printing the result for each condition.",
+                    "code": "public class ComparisonExample {\n    public static void main(String[] args) {\n        int a = 10;\n        int b = 20;\n\n        // Using comparison operators in if-else\n        if (a < b) {\n            System.out.println(\"a is less than b\"); // Output: a is less than b\n        }\n\n        if (a <= b) {\n            System.out.println(\"a is less than or equal to b\"); // Output: a is less than or equal to b\n        }\n\n        if (a > b) {\n            System.out.println(\"a is greater than b\"); // Output: a is not equal to b\n        }\n\n        if (a >= b) {\n            System.out.println(\"a is greater than or equal to b\");\n        }\n\n        if (a == b) {\n            System.out.println(\"a is equal to b\");\n        }\n\n        if (a != b) {\n            System.out.println(\"a is not equal to b\");\n        }\n    }\n}"
                 },
                 
                 {
-                    "description": "Arrow functions provide a concise syntax in JavaScript.",
-                    "code": "const add = (a, b) => a + b;\nconsole.log(add(5, 3));"
+                    "description": "",
+                    "code": ""
                 }
             ],
             "subtopics": [
