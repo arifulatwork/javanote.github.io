@@ -115,12 +115,22 @@
                 },
                 {
                     "id": "subtopic3-2",
-                    "title": "Higher-Order Functions",
-                    "description": "Functions that take other functions as arguments or return functions.",
+                    "title": "Nested Loops",
+                    "description": "A nested loop is a loop inside another loop. We use nested loops when we need to repeat a process multiple times within another repeated process.",
                     "content": [
                         {
-                            "description": "Array methods like `map`, `filter`, and `reduce` use higher-order functions.",
-                            "code": "const numbers = [1, 2, 3, 4];\nconst squared = numbers.map(n => n * n);\nconsole.log(squared);"
+                            "description": "Main Reason for Using Nested Loops",
+                            "code": "public class NestedIfElse {\n\n    public static void main(String[] args) {\n        int number = -6;\n\n        if(number > 0) {\n            if(number % 2 == 0) { // nested if: check if number is even\n                System.out.println(\"The Number is Positive and Even\");\n            } else {\n                System.out.println(\"The Number is Positive but Odd\");\n            }\n        } else {\n            System.out.println(\"The Number is Not Positive\"); // This is the output now\n        }\n    }\n}",
+                            "table": {
+                            "headers": ["Main Reason", "Explanation", "Example"],
+                            "rows": [
+                    ["Working with Multi-Dimensional Data", "Used for handling 2D arrays, tables, matrices, and grids.","Traversing a 2D array (rows & columns)."],
+                    ["Generating Patterns & Shapes", "Helps print triangle, square, or other patterns using loops.","Printing a pyramid of stars (*)"],
+                    ["Solving Complex Problems Efficiently", "Useful for comparing every element in a list with others.","Checking duplicate values in an array."],
+                    ["Simulating Multiple Conditions", "Used for simulations like time-based processes, games, etc.", "Simulating a clock counting hours & minutes."]
+                    
+                ]
+            }
                         }
                     ]
                 }
