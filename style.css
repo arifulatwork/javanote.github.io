@@ -111,6 +111,53 @@ footer {
     margin-top: auto;
 }
 
+
+/* Table Start */
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    font-size: 1rem;
+}
+
+th {
+    background-color: #333;
+    color: white;
+}
+
+td {
+    background-color: #f9f9f9;
+}
+
+td:hover {
+    background-color: #f1f1f1;
+}
+
+/* Responsive table */
+@media (max-width: 768px) {
+    th, td {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+}
+
+
+/* Table End */
+
+
+
+
 @media (max-width: 768px) {
     .sidebar {
         width: 200px;
