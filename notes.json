@@ -100,12 +100,16 @@
             "subtopics": [
                 {
                     "id": "subtopic3-1",
-                    "title": "Function Parameters",
-                    "description": "Functions can have default, optional, and rest parameters.",
+                    "title": "If-else-else if",
+                    "description": "",
                     "content": [
                         {
-                            "description": "Default parameters in JavaScript help avoid undefined values.",
-                            "code": "function greet(name = 'Guest') {\n    console.log(`Hello, ${name}`);\n}\ngreet();"
+                            "description": "Basic if-else Statement",
+                            "code": "public class basicIfElse {\n\n    public static void main(String[] args) {\n        int number = 10;\n\n        if(number > 0) {\n            System.out.println(\"The number is positive\"); // This is result\n        } else {\n            System.out.println(\"The number is not positive\");\n        }\n    }\n}"
+                        },
+                        {
+                            "description": "Basic if-else Statement",
+                            "code": "public class basicIfElse {\n\n    public static void main(String[] args) {\n        int number = 10;\n\n        if(number > 0) {\n            System.out.println(\"The number is positive\"); // This is result\n        } else {\n            System.out.println(\"The number is not positive\");\n        }\n    }\n}"
                         }
                     ]
                 },

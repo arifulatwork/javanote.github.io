@@ -1,0 +1,50 @@
+{
+    "id": "topic3",
+    "title": "Control Statement",
+    "description": "",
+    "content": [
+        {
+            "description": "This Java code demonstrates the use of comparison operators to compare two integers 'a' and 'b'. It evaluates conditions such as 'less than', 'less than or equal to', 'greater than', 'greater than or equal to', 'equal to', and 'not equal to', printing the result for each condition.",
+            "code": "public class ComparisonExample {\n    public static void main(String[] args) {\n        int a = 10;\n        int b = 20;\n\n        // Using comparison operators in if-else\n        if (a < b) {\n            System.out.println(\"a is less than b\"); // Output: a is less than b\n        }\n\n        if (a <= b) {\n            System.out.println(\"a is less than or equal to b\"); // Output: a is less than or equal to b\n        }\n\n        if (a > b) {\n            System.out.println(\"a is greater than b\"); // Output: a is not equal to b\n        }\n\n        if (a >= b) {\n            System.out.println(\"a is greater than or equal to b\");\n        }\n\n        if (a == b) {\n            System.out.println(\"a is equal to b\");\n        }\n\n        if (a != b) {\n            System.out.println(\"a is not equal to b\");\n        }\n    }\n}",
+            "table": {
+                "headers": ["Comparison", "Result"],
+                "rows": [
+                    ["a < b", "true"],
+                    ["a <= b", "true"],
+                    ["a > b", "false"],
+                    ["a >= b", "false"],
+                    ["a == b", "false"],
+                    ["a != b", "true"]
+                ]
+            }
+        },
+        {
+            "description": "",
+            "code": ""
+        }
+    ],
+    "subtopics": [
+        {
+            "id": "subtopic3-1",
+            "title": "Function Parameters",
+            "description": "Functions can have default, optional, and rest parameters.",
+            "content": [
+                {
+                    "description": "Default parameters in JavaScript help avoid undefined values.",
+                    "code": "function greet(name = 'Guest') {\n    console.log(`Hello, ${name}`);\n}\ngreet();"
+                }
+            ]
+        },
+        {
+            "id": "subtopic3-2",
+            "title": "Higher-Order Functions",
+            "description": "Functions that take other functions as arguments or return functions.",
+            "content": [
+                {
+                    "description": "Array methods like `map`, `filter`, and `reduce` use higher-order functions.",
+                    "code": "const numbers = [1, 2, 3, 4];\nconst squared = numbers.map(n => n * n);\nconsole.log(squared);"
+                }
+            ]
+        }
+    ]
+}
