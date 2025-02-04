@@ -108,8 +108,8 @@
                             "code": "public class basicIfElse {\n\n    public static void main(String[] args) {\n        int number = 10;\n\n        if(number > 0) {\n            System.out.println(\"The number is positive\"); // This is result\n        } else {\n            System.out.println(\"The number is not positive\");\n        }\n    }\n}"
                         },
                         {
-                            "description": "Basic if-else Statement",
-                            "code": "public class basicIfElse {\n\n    public static void main(String[] args) {\n        int number = 10;\n\n        if(number > 0) {\n            System.out.println(\"The number is positive\"); // This is result\n        } else {\n            System.out.println(\"The number is not positive\");\n        }\n    }\n}"
+                            "description": "if-else with Multiple Conditions (if-else if-else)",
+                            "code": "public class multiPleCondition {\n\n    public static void main(String[] args) {\n        int Age = 18;\n\n        if(Age < 18) {\n            System.out.println(\"You are a minor\");\n        } else if(Age == 18) {\n            System.out.println(\"You just become an adult\"); // This is the result\n        } else {\n            System.out.println(\"You are an adult\");\n        }\n    }\n}"
                         }
                     ]
                 },
