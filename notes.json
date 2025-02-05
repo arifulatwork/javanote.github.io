@@ -115,12 +115,24 @@
                 },
                 {
                     "id": "subtopic3-2",
+                    "title": "Get Input with if-else",
+                    "description": "",
+                    "content": [
+                        {
+                            "description": "In Java, we can get user input using the Scanner class and control the flow using if-else or other control statements like switch, while, and for",
+                            "code": "import java.util.Scanner;\n\npublic class IfElseInput {\n\n    public static void main(String[] args) {\n        Scanner inputOutput = new Scanner(System.in); // We need to create scanner object\n\n        System.out.println(\"Enter your Age\");\n        int age = inputOutput.nextInt();\n\n        if (age < 18) {\n            System.out.println(\"You are a minor\");\n        } else {\n            System.out.println(\"You are an adult\");\n        }\n\n        inputOutput.close(); // Close the Scanner\n    }\n}"
+                        }
+                        
+                    ]
+                },
+                {
+                    "id": "subtopic3-3",
                     "title": "Nested Loops",
                     "description": "A nested loop is a loop inside another loop. We use nested loops when we need to repeat a process multiple times within another repeated process.",
                     "content": [
                         {
                             "description": "Main Reason for Using Nested Loops",
-                            "code": "public class NestedIfElse {\n\n    public static void main(String[] args) {\n        int number = -6;\n\n        if(number > 0) {\n            if(number % 2 == 0) { // nested if: check if number is even\n                System.out.println(\"The Number is Positive and Even\");\n            } else {\n                System.out.println(\"The Number is Positive but Odd\");\n            }\n        } else {\n            System.out.println(\"The Number is Not Positive\"); // This is the output now\n        }\n    }\n}",
+                            "code": "Question: 01 - Write a Java program that checks whether a number is positive. If the number is positive, determine whether it is even or odd \n\n public class NestedIfElse {\n\n    public static void main(String[] args) {\n        int number = -6;\n\n        if(number > 0) {\n            if(number % 2 == 0) { // nested if: check if number is even\n                System.out.println(\"The Number is Positive and Even\");\n            } else {\n                System.out.println(\"The Number is Positive but Odd\");\n            }\n        } else {\n            System.out.println(\"The Number is Not Positive\"); // This is the output now\n        }\n    }\n}",
                             "table": {
                             "headers": ["Main Reason", "Explanation", "Example"],
                             "rows": [
