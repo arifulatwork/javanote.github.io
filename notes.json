@@ -127,7 +127,7 @@
                 },
                 {
                     "id": "subtopic3-3",
-                    "title": "Nested Loops",
+                    "title": "Nested Loops with if-else only",
                     "description": "A nested loop is a loop inside another loop. We use nested loops when we need to repeat a process multiple times within another repeated process.",
                     "content": [
                         {
@@ -144,6 +144,33 @@
                 ]
             }
                         }
+                    ]
+                },
+                {
+                    "id": "subtopic3-4",
+                    "title": "Java Switch",
+                    "description": "Instead of writing many if..else statements, we can use the switch statement",
+                    "content": [
+                        {
+                            "description": "Using switch is often more structured and easier to read compared to long if-else chains",
+                            "code": "public class Intro {\n\n    public static void main(String[] args) {\n        int day = 4; // Define an integer variable 'day' and set it to 4\n\n        // Switch statement to check the value of 'day'\n        switch (day) {\n            case 1:\n                System.out.println(\"Monday\"); // Print \"Monday\" if day is 1\n                break;\n            case 2:\n                System.out.println(\"Tuesday\"); // Print \"Tuesday\" if day is 2\n                break;\n            case 3:\n                System.out.println(\"Wednesday\"); // Print \"Wednesday\" if day is 3\n                break;\n            case 4:\n                System.out.println(\"Thursday\"); // Print \"Thursday\" if day is 4\n                break;\n            case 5:\n                System.out.println(\"Friday\"); // Print \"Friday\" if day is 5\n                break;\n            case 6:\n                System.out.println(\"Saturday\"); // Print \"Saturday\" if day is 6\n                break;\n            case 7:\n                System.out.println(\"Sunday\"); // Print \"Sunday\" if day is 7\n                break;\n        }\n    }\n}",
+				"table": {
+                		"headers": ["Scenario", "Use switch","Use if-else"],
+                		"rows": [
+                    		["Comparing a single variable against multiple fixed values", "✅Yes", "❌No"],
+                    		["Checking a range (e.g., x > 10, age < 18)", "❌No", "✅Yes"],
+				["Using logical expressions (e.g., a > 5 && b < 10)", "❌No", "✅Yes"],
+                    		["Simple conditions with few options", "✅Yes", "✅Yes"],
+				["More than 3-4 conditions with fixed values", "✅ Yes (cleaner)", "❌ No (messy)"]
+                    
+                ]
+            }
+                        },
+                        {
+                            "description": "The default keyword specifies some code to run if there is no case match:",
+                            "code": "public class Main {\n  public static void main(String[] args) {\n    int day = 8; // Define 'day' with a value that is not in the cases\n\n    // Switch statement to check the value of 'day'\n    switch (day) {\n      case 1:\n        System.out.println(\"Monday\");\n        break;\n      case 2:\n        System.out.println(\"Tuesday\");\n        break;\n      case 3:\n        System.out.println(\"Wednesday\");\n        break;\n      case 4:\n        System.out.println(\"Thursday\");\n        break;\n      case 5:\n        System.out.println(\"Friday\");\n        break;\n      case 6:\n        System.out.println(\"Saturday\");\n        break;\n      case 7:\n        System.out.println(\"Sunday\");\n        break;\n      default:\n        System.out.println(\"Invalid day\"); // This runs if no case matches\n    }\n  }\n}"
+                        }
+                        
                     ]
                 }
             ]
