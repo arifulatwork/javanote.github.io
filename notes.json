@@ -172,6 +172,18 @@
                         }
                         
                     ]
+                },
+                {
+                    "id": "subtopic3-2",
+                    "title": "Get Input with switch",
+                    "description": "",
+                    "content": [
+                        {
+                            "description": "In Java, we can get user input using the Scanner class and control the flow using if-else or other control statements like switch, while, and for",
+                            "code": "import java.util.Scanner;  // Import Scanner class for user input\n\npublic class inputSwitch {\n\n    public static void main(String[] args) {\n        \n        Scanner inputSwitchData = new Scanner(System.in); // Create Scanner object\n\n        System.out.println(\"Enter a number (1-3): \"); // Prompt user for input\n\n        int inputData = inputSwitchData.nextInt(); // Read user input\n\n        // Switch case to check user input\n        switch (inputData) {\n            case 1:\n                System.out.println(\"You Select System 1\");\n                break;\n            \n            case 2:\n                System.out.println(\"You Select System 2\");\n                break;\n\n            case 3:\n                System.out.println(\"You Select System 3\");\n                break;\n\n            default:\n                System.out.println(\"Invalid Choice\"); // Handle invalid input\n        }\n\n        inputSwitchData.close(); // Close Scanner object\n    }\n}"
+                        }
+                        
+                    ]
                 }
             ]
         },
