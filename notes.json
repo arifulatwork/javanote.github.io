@@ -229,15 +229,19 @@
         {
             "id": "topic5",
             "title": "Arrays",
-            "description": "Arrays are used to store multiple values in a single variable.",
+            "description": "Suppose you have a guest at your house, and you are serving them tea. Instead of bringing separate cups of tea one by one, you place all the cups on a tray and serve them together. In this analogy, the tray represents an array.",
             "content": [
                 {
-                    "description": "JavaScript arrays are flexible and can hold mixed data types.",
-                    "code": "let fruits = [\"Apple\", \"Banana\", \"Cherry\"];\nconsole.log(fruits[0]);"
+                    "description": "Thease are my cup of tea",
+                    "code": "int i=5; \nint j=6; \nint k=7; \n\nthease are my cup of tea"
                 },
                 {
-                    "description": "Java arrays are strongly typed and have a fixed size.",
-                    "code": "String[] fruits = {\"Apple\", \"Banana\", \"Cherry\"};\nSystem.out.println(fruits[0]);"
+                    "description": "Here is your tray for the tea",
+                    "code": "int num[]= {5,6,7}; \nint num[]=new int[4];"
+                },
+                {
+                    "description": "Full Example of Array",
+                    "code": "public class ArrayExample {\n    public static void main(String[] args) {\n        String[] cars = {\"Tesla\", \"Toyota\", \"Hyundai\"};\n        int[] numbers = {10, 20, 30, 40, 50};\n        \n} "
                 }
             ],
             "subtopics": [
