@@ -276,9 +276,21 @@
                     "description": "Arrays within arrays, useful for matrices.",
                     "content": [
                         {
-                            "description": "Access elements using multiple indices.",
-                            "code": "let matrix = [\n    [1, 2, 3],\n    [4, 5, 6],\n    [7, 8, 9]\n];\nconsole.log(matrix[1][2]);"
-                        }
+                            "description": "Declaring and Initializing a 2D Array",
+                            "code": "public class TwoDArray{\n\n    public static void main(String[] args) {\n        \n        int [] [] arr ={\n\n            // Declare and initialize 2D Array\n            {1,2,3},\n            {4,5,6},\n            {7,8,9}\n\n        };\n\n        // Accessing Array Items Manually\n        System.err.println(arr[0][0]); // 1\n        System.err.println(arr[0][1]); // 2\n        System.err.println(arr[0][2]); // 3\n        System.err.println(arr[1][0]); // 4\n        System.err.println(arr[1][1]); // 5\n        System.err.println(arr[1][2]); // 6\n        System.err.println(arr[2][0]); // 7\n        System.err.println(arr[2][1]); // 8\n        System.err.println(arr[2][2]); // 9\n    }\n}",
+                            "table": {
+                		"headers": ["Index", "Column 0","Column 1","Column 2"],
+                		"rows": [
+                    		["Row 0", "arr [0][0]", "[0][1]", "[0][2]"],
+                            ["Row 1", "arr [1][0]", "[1][1]", "[1][2]"],
+                            ["Row 2", "arr [2][0]", "[2][1]", "[2][2]"]
+                ]
+            }
+                        },
+                        {
+                            "description": "💡Example: Printing a 2D Array Using Loops: Instead of manually accessing each element, we can use nested loops to iterate through the array.",
+                            "code": "public class Main {\n    public static void main(String[] args) {\n        // Declare and initialize a 3x3 2D array\n        int[][] arr = {\n            {1, 2, 3},\n            {4, 5, 6},\n            {7, 8, 9}\n        };\n\n        // Loop through rows\n        for (int i = 0; i < arr.length; i++) {\n            // Loop through columns\n            for (int j = 0; j < arr[i].length; j++) {\n                // Print each element\n                System.out.print(arr[i][j] + \" \");\n            }\n            // Move to the next line after each row\n            System.out.println();\n        }\n    }\n}"
+                          }
                     ]
                 }
             ]
