@@ -247,18 +247,32 @@
             "subtopics": [
                 {
                     "id": "subtopic5-1",
-                    "title": "Array Methods",
-                    "description": "Common methods include `push`, `pop`, `shift`, and `unshift`.",
+                    "title": "Access & Modify Array ",
+                    "description": "Here, I showed how to access an array by creating an object and also how to access it from the main method.",
                     "content": [
                         {
-                            "description": "Use `push` to add elements and `pop` to remove the last element.",
-                            "code": "let numbers = [1, 2, 3];\nnumbers.push(4);\nconsole.log(numbers);\nnumbers.pop();\nconsole.log(numbers);"
-                        }
+                            "description": "look at this example here",
+                            "code": "public class AccessArray {\n\n    String[] mobileOperator = {\"Nokia\", \"Samsung\", \"iOS\"};\n    int[] number = {1, 2, 3, 0, 4, 5};\n\n    public static void main(String[] args) {\n        String[] networkOperator = {\"LMT\", \"Visio\", \"iOS\"};\n\n        AccessArray nice = new AccessArray();\n\n        System.out.println(nice.mobileOperator[0]);\n        System.out.println(nice.number[1]);\n        System.out.println(networkOperator[1]);\n    }\n}"
+                        },
+                        {
+                            "description": "Output",
+                            "code": "Nokia\n2\nVisio"
+                        },
+                        {
+                            "description": "Accessing Elements of an Array with Comments",
+                            "code": "// Define a class named AccessArray\npublic class AccessArray {\n\n    // Declare an array of strings named mobileOperator and assign some mobile brands\n    String[] mobileOperator = {\"Nokia\", \"Samsung\", \"iOS\"};\n\n    // Declare an array of integers named number with some values\n    int[] number = {1, 2, 3, 0, 4, 5};\n\n    // Main method – the starting point of the program\n    public static void main(String[] args) {\n\n        // Declare and initialize another string array inside the main method\n        String[] networkOperator = {\"LMT\", \"Visio\", \"iOS\"};\n\n        // Create an object of AccessArray class\n        AccessArray nice = new AccessArray();\n\n        // Print the first element of the mobileOperator array (Nokia)\n        System.out.println(nice.mobileOperator[0]);\n\n        // Print the second element of the number array (2)\n        System.out.println(nice.number[1]);\n\n        // Print the second element of the networkOperator array (Visio)\n        System.out.println(networkOperator[1]);\n    }\n}"
+                          },
+                          {
+                            "description": "Modifying Elements in an Array",
+                            "code": "public class ChangeElementArray {\n\n    // Instance variable (array)  \n    String[] cars = {\"Toyota\"}; \n\n    public static void main(String[] args) {\n\n        // Local array  \n        String[] fruit = {\"Apple\"};  \n\n        // Modifying local array  \n        fruit[0] = \"Mango\";  \n\n        // Creating an object to access instance variable  \n        ChangeElementArray changeArray = new ChangeElementArray();  \n\n        // Modifying instance array  \n        changeArray.cars[0] = \"Tesla\";  \n\n        // Printing modified values  \n        System.out.println(changeArray.cars[0]); // Output: Tesla  \n        System.out.println(fruit[0]); // Output: Mango  \n    }\n}"
+                          }
+                          
+                          
                     ]
                 },
                 {
                     "id": "subtopic5-2",
-                    "title": "Multidimensional Arrays",
+                    "title": "2D Array",
                     "description": "Arrays within arrays, useful for matrices.",
                     "content": [
                         {
