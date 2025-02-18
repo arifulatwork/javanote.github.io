@@ -193,12 +193,31 @@
             "description": "Loops are used to execute a block of code repeatedly.",
             "content": [
                 {
-                    "description": "For loops are commonly used for iterating over arrays.",
-                    "code": "for (let i = 0; i < 5; i++) {\n    console.log(i);\n}"
+                    "description": "A for loop is a way to repeat a block of code a specific number of times. It is used when you know how many times you need to run the loop.",
+                    "code": "for (initialization; condition; update) \n { // Code to execute \n}"
                 },
                 {
-                    "description": "While loops continue as long as the condition is true.",
-                    "code": "let count = 0;\nwhile (count < 3) {\n    console.log(count);\n    count++;\n}"
+                    "description": "Imagine you have five apples, and you want to count them one by one. Instead of saying:\n👉 Apple 1\n👉 Apple 2\n👉 Apple 3\n👉 Apple 4\n👉 Apple 5",
+                    "code": "public class Main { \n public static void main(String[] args) { \n // Loop runs 5 times \n for (int i = 1; i <= 5; i++) { \n System.out.println(\"Apple \" + i); }}}"
+                },
+                {
+                    "description": "Output",
+                    "code": "Apple 1 \nApple 2 \nApple 3\nApple 4 \nApple 5"
+                },
+                {
+                    "description": "Lets See How Loop Works for this above code",
+                    "code": "",
+                    "table": {
+                "headers": ["Iteration", "Value of i", "Condition i <= 5", "Prints i", "i++ (Increments)"],
+                "rows": [
+                ["1st", "1", "✅ True", "1", "i = 2"],
+                ["2nd", "2", "✅ True", "2", "i = 3"],
+                ["3rd", "3", "✅ True", "3", "i = 4"],
+                ["4th", "4", "✅ True", "4", "i = 5"],
+                ["5th", "5", "✅ True", "5", "i = 6"],
+                ["6th", "6", "❌ False (Loop stops)", "❌ Nothing", "Loop ends"]
+                    ]
+                    }
                 }
             ],
             "subtopics": [
