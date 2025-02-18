@@ -218,11 +218,93 @@
                 ["6th", "6", "❌ False (Loop stops)", "❌ Nothing", "Loop ends"]
                     ]
                     }
+                },
+                {
+                    "description": "Reverse for Loop: To Print Numbers in reverse",
+                    "code": "public class ReverseForLoop { \n\n public static void main(String[] args) { \n for (int i = 5; i >= 1; i--) { \n System.err.println(i);} }  }"
+                },
+                {
+                    "description": "Output",
+                    "code": "5\n4\n3\n2\n1"
+                },
+                {
+                    "description": "How the Reverse For Loop Works:",
+                    "code": "",
+                    "table":{
+                    "headers": ["Iteration", "Value of i", "Condition i >= 1", "Prints i", "i-- (Decrements)"],
+                    "rows": [
+                    ["1st", "5", "✅ True", "5", "i = 4"],
+                    ["2nd", "4", "✅ True", "4", "i = 3"],
+                    ["3rd", "3", "✅ True", "3", "i = 2"],
+                    ["4th", "2", "✅ True", "2", "i = 1"],
+                    ["5th", "1", "✅ True", "1", "i = 0"],
+                    ["6th", "0", "❌ False (Loop stops)", "❌ Nothing", "Loop ends"]
+                    ]}
+
                 }
+
             ],
             "subtopics": [
                 {
                     "id": "subtopic4-1",
+                    "title": "Basic Reverse Loops",
+                    "description": "",
+                    "content": [
+                {
+                    "description": "A for loop is a way to repeat a block of code a specific number of times. It is used when you know how many times you need to run the loop.",
+                    "code": "for (initialization; condition; update) \n { // Code to execute \n}"
+                },
+                {
+                    "description": "Imagine you have five apples, and you want to count them one by one. Instead of saying:\n👉 Apple 1\n👉 Apple 2\n👉 Apple 3\n👉 Apple 4\n👉 Apple 5",
+                    "code": "public class Main { \n public static void main(String[] args) { \n // Loop runs 5 times \n for (int i = 1; i <= 5; i++) { \n System.out.println(\"Apple \" + i); }}}"
+                },
+                {
+                    "description": "Output",
+                    "code": "Apple 1 \nApple 2 \nApple 3\nApple 4 \nApple 5"
+                },
+                {
+                    "description": "Lets See How Loop Works for this above code",
+                    "code": "",
+                    "table": {
+                "headers": ["Iteration", "Value of i", "Condition i <= 5", "Prints i", "i++ (Increments)"],
+                "rows": [
+                ["1st", "1", "✅ True", "1", "i = 2"],
+                ["2nd", "2", "✅ True", "2", "i = 3"],
+                ["3rd", "3", "✅ True", "3", "i = 4"],
+                ["4th", "4", "✅ True", "4", "i = 5"],
+                ["5th", "5", "✅ True", "5", "i = 6"],
+                ["6th", "6", "❌ False (Loop stops)", "❌ Nothing", "Loop ends"]
+                    ]
+                    }
+                },
+                {
+                    "description": "Reverse for Loop: To Print Numbers in reverse",
+                    "code": "public class ReverseForLoop { \n\n public static void main(String[] args) { \n for (int i = 5; i >= 1; i--) { \n System.err.println(i);} }  }"
+                },
+                {
+                    "description": "Output",
+                    "code": "5\n4\n3\n2\n1"
+                },
+                {
+                    "description": "How the Reverse For Loop Works:",
+                    "code": "",
+                    "table":{
+                    "headers": ["Iteration", "Value of i", "Condition i >= 1", "Prints i", "i-- (Decrements)"],
+                    "rows": [
+                    ["1st", "5", "✅ True", "5", "i = 4"],
+                    ["2nd", "4", "✅ True", "4", "i = 3"],
+                    ["3rd", "3", "✅ True", "3", "i = 2"],
+                    ["4th", "2", "✅ True", "2", "i = 1"],
+                    ["5th", "1", "✅ True", "1", "i = 0"],
+                    ["6th", "0", "❌ False (Loop stops)", "❌ Nothing", "Loop ends"]
+                    ]}
+
+                }
+
+            ]
+                },
+                {
+                    "id": "subtopic4-2",
                     "title": "Nested Loops",
                     "description": "Loops within loops, useful for multidimensional arrays.",
                     "content": [
@@ -233,7 +315,7 @@
                     ]
                 },
                 {
-                    "id": "subtopic4-2",
+                    "id": "subtopic4-3",
                     "title": "Break and Continue",
                     "description": "Control loop flow with `break` and `continue`.",
                     "content": [
