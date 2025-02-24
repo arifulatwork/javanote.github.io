@@ -316,7 +316,7 @@
                 },
                 {
                     "id": "subtopic4-3",
-                    "title": "Break and Continue",
+                    "title": "Break",
                     "description": "Control loop flow with `break` and `continue`.",
                     "content": [
                         {
@@ -363,6 +363,68 @@
                                 }
                               }
                         
+                    ]
+                },
+                {
+                    "id": "subtopic4-4",
+                    "title": "Continue",
+                    "description": "In Java, the continue statement is used to skip the current iteration of a loop and move to the next iteration. When continue is encountered, the remaining code in the current loop iteration is ignored, and the loop proceeds to the next iteration.",
+                    "content": [
+                        {
+                            "description": "continue: Skips the current iteration and moves to the next iteration of the loop.",
+                            "code": "public class SkipEvenNumbers {\n    public static void main(String[] args) {\n        for (int i = 1; i <= 10; i++) {\n            if (i % 2 == 0) {\n                continue; // Skip even numbers\n            }\n            System.out.println(i);\n        }\n    }\n}"
+                        },
+                        {
+                            "description": "How This Code Works Step by Step",
+                            "code": ""
+                        },
+                        {
+                            "description": "This loop prints only odd numbers from 1 to 10 by skipping even numbers using the continue statement.",
+                            "code": ""
+                        },
+                        {
+                            "description": "Loop Breakdown",
+                            "code": ""
+                        },
+                        {
+                            "description": "1. Initialization (int i = 1) → Starts i at 1.",
+                            "code": ""
+                        },
+                        {
+                            "description": "2. Condition (i <= 10) → Runs the loop as long as i is less than or equal to 10.",
+                            "code": ""
+                        },
+                        {
+                            "description": "3. Increment (i++) → Increases i by 1 in each iteration.",
+                            "code": ""
+                        },
+                        {
+                            "description": "4. Check if i is even (i % 2 == 0):",
+                            "code": ""
+                        },
+                        {
+                            "description": "If true → continue; is executed, skipping the rest of the loop body (so System.out.println(i); is not executed).",
+                            "code": ""
+                        },
+                        {
+                            "description": "If false → System.out.println(i); prints i.",
+                            "code": "",
+                            "table": {
+    "headers": ["Iteration", "i (value)", "Loop Condition (i <= 10)", "Condition (i == 5)", "Action", "Output"],
+    "rows": [
+      ["1", "1", "1 <= 10 (True)", "No", "Print 1", "1"],
+      ["2", "2", "2 <= 10 (True)", "No", "Print 2", "2"],
+      ["3", "3", "3 <= 10 (True)", "No", "Print 3", "3"],
+      ["4", "4", "4 <= 10 (True)", "No", "Print 4", "4"],
+      ["5", "5", "5 <= 10 (True)", "Yes", "Skip printing (continue statement)", "(skip)"],
+      ["6", "6", "6 <= 10 (True)", "No", "Print 6", "6"],
+      ["7", "7", "7 <= 10 (True)", "No", "Print 7", "7"],
+      ["8", "8", "8 <= 10 (True)", "No", "Print 8", "8"],
+      ["9", "9", "9 <= 10 (True)", "No", "Print 9", "9"],
+      ["10", "10", "10 <= 10 (True)", "No", "Print 10", "10"]
+    ]
+  }
+                        }
                     ]
                 }
             ]
