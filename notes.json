@@ -349,8 +349,20 @@
                         },
                         {
                             "description": "4. Loop Stops at i = 5, so numbers after 5 are never printed.",
-                            "code": ""
-                        }
+                            "code": "",
+                            
+                                "table": {
+                                  "headers": ["Iteration", "i Value", "Condition (i ≤ 10)", "Check (i == 5)", "Action", "Output"],
+                                  "rows": [
+                                    ["1st", "1", "✅ True", "❌ No", "Print 1", "1"],
+                                    ["2nd", "2", "✅ True", "❌ No", "Print 2", "2"],
+                                    ["3rd", "3", "✅ True", "❌ No", "Print 3", "3"],
+                                    ["4th", "4", "✅ True", "❌ No", "Print 4", "4"],
+                                    ["5th", "5", "✅ True", "✅ Yes", "Break (Exit Loop)", "(Loop Stops)"]
+                                  ]
+                                }
+                              }
+                        
                     ]
                 }
             ]
